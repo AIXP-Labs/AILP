@@ -1,0 +1,76 @@
+site_name: AILP — AI List Protocol
+site_url: https://ailp.dev
+site_description: An open protocol defining how AI Bot service directories operate, enabling decentralized service discovery, certificates, and quality-based ranking.
+repo_url: https://github.com/AIXP-Labs/AILP
+repo_name: AILP
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Specification:
+    - Overview: specification.md
+    - Full Specification (EN): specification/AILP_Protocol.md
+    - 完整规范 (中文): specification/AILP_Protocol_cn.md
+  - Guides:
+    - Getting Started: guides/getting-started.md
+  - Topics:
+    - What is AILP?: topics/what-is-ailp.md
+  - Reference:
+    - Profile Schema: reference/profile-schema.md
+    - Skills Taxonomy: reference/skills-taxonomy.md
+  - ADRs:
+    - ADR-001 Protocol for Yellow Page Operators: adrs/adr-001-protocol-for-yellow-page-operators.md
+    - ADR-002 Quality-Based Ranking: adrs/adr-002-quality-based-ranking.md
+    - ADR-003 Axiom 0 Independence: adrs/adr-003-axiom-0-independence.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AIXP-Labs
